@@ -1,0 +1,20 @@
+<div class="order-form-container">
+    <h2 class="order-title" style="text-align: center;">Create Order</h2>
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="order-form">
+        <div class="form-group">
+            <label for="stockSymbol">Stock Symbol</label>
+            <input matInput formControlName="stockSymbol" readonly class="form-control" id="stockSymbol" placeholder="Stock Symbol">
+        </div>
+        <div class="form-group">
+            <label for="orderType">Order Type</label>
+            <input matInput formControlName="orderType" readonly class="form-control" id="orderType" placeholder="Order Type">
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input matInput type="number" formControlName="quantity" min="1" class="form-control" id="quantity" placeholder="Enter Quantity">
+        </div>
+        <div style="text-align: center; padding-top: 20px;">
+            <button type="submit" class="btn btn-primary" [disabled]="!orderForm.valid">Place Order</button>
+        </div>
+    </form>
+</div>

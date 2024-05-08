@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "SwIEUuYZDOrcsCPwKS6ABcxrSwnYDsZNTExQTaKfedA=",
+  "Source": "Test",
+  "BasePath": "_content/Test",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Test/wwwroot",
+      "Source": "Test",
+      "ContentRoot": "/Users/macbook/Desktop/EGID/Test/wwwroot/",
+      "BasePath": "_content/Test",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/macbook/Desktop/EGID/Test/wwwroot/favicon.ico",
+      "SourceId": "Test",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/macbook/Desktop/EGID/Test/wwwroot/",
+      "BasePath": "_content/Test",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    }
+  ]
+}

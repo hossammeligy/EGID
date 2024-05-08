@@ -1,0 +1,34 @@
+<div class="container mt-3">
+    <h1 id="tableLabel">Orders History</h1>
+    <p>This component demonstrates fetching data from the server.</p>
+
+    <!-- Conditional rendering based on the presence of orders -->
+    <div *ngIf="orders.length > 0; else noOrdersTemplate">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Order Id</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Order Type</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Order Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders">
+                    <td>{{ order.orderId }}</td>
+                    <td>{{ order.stockSymbol }}</td>
+                    <td>{{ order.orderType }}</td>
+                    <td>{{ order.quantity }}</td>
+                    <td>{{ order.orderTime | date:'short' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Template to display when there are no orders -->
+    <ng-template #noOrdersTemplate>
+        <div class="alert alert-info" role="alert">
+            No orders yet.
+        </div>
+    </ng-template>
+</div>

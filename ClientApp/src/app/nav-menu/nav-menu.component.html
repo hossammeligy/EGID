@@ -1,0 +1,45 @@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <!-- Left side: Icon brand -->
+            <a class="navbar-brand" [routerLink]="['/']">
+                <i class="bi bi-piggy-bank-fill" style="font-size: 2.5rem;"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Centered text only visible when expanded -->
+            <div class="mx-auto d-none d-sm-inline-block">
+                <a class="navbar-brand" [routerLink]="['/']" style="font-size: 1.5rem; font-weight: bold;">InStock</a>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" [ngClass]="{ show: isExpanded }">
+                <ul class="navbar-nav flex-grow">
+                    <li class="nav-item" [routerLinkActive]="['link-active']">
+                        <a class="nav-link text-dark" [routerLink]="['/Stocks']">
+                            <i class="bi bi-graph-up" style="font-size: 2.5rem;"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item" [routerLinkActive]="['link-active']">
+                        <a class="nav-link text-dark" [routerLink]="['/Orders']">
+                            <i class="bi bi-cart-fill" style="font-size: 2.5rem;"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item" [routerLinkActive]="['link-active']">
+                        <a class="nav-link text-dark" [routerLink]="['/Feedback']">
+                            <i class="bi bi-chat-square-dots" style="font-size: 2.5rem;"></i>
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <h2>Feedback Responses</h2>
+     Check if there are feedback entries in the array 
+    <div *ngIf="feedbackResponses.length > 0; else noFeedback">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Feedback</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let feedback of feedbackResponses">
+                    <th scope="row">{{ feedback.id }}</th>
+                    <td>{{ feedback.email }}</td>
+                    <td>{{ feedback.username }}</td>
+                    <td>{{ feedback.feedback }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+     Template to display if no feedback is available 
+    <ng-template #noFeedback>
+        <div class="alert alert-info">No feedbacks available.</div>
+    </ng-template>
+</div>

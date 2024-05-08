@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <!-- Angular Form Group -->
+            <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+                <!-- Email Input Field -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="email" formControlName="email" class="form-control" placeholder="Personal Email" aria-label="email" aria-describedby="basic-addon1" required>
+                </div>
+                <!-- Mobile Input Field -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">+</span>
+                    <input type="tel" formControlName="mobile" class="form-control" placeholder="Mobile Number" aria-label="mobile" aria-describedby="basic-addon3" required>
+                </div>
+                <!-- Username Input Field -->
+                <div class="input-group mb-3">
+                    <input type="text" formControlName="username" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                    <span class="input-group-text" id="basic-addon2">@inStock.com</span>
+                </div>
+                <!-- Feedback Textarea Field -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Feedback</span>
+                    <textarea class="form-control" formControlName="feedback" id="feedbackTextarea" aria-label="feedback" required></textarea>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" id="submitButton" class="btn btn-primary mt-3" [disabled]="!feedbackForm.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

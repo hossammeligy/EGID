@@ -1,0 +1,10 @@
+/* Stylesheet of your Angular component */
+.buy-row {
+  background-color: #28a745; /* Bootstrap green color for 'Buy' */
+  color: white; /* White text color for better readability */
+}
+
+.sell-row {
+  background-color: #dc3545; /* Bootstrap red color for 'Sell' */
+  color: white; /* White text color for better readability */
+}

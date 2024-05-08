@@ -1,0 +1,51 @@
+/* Basic reset for styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders between cells are merged */
+  table-layout: fixed; /* Helps keep uniform column sizes */
+}
+
+thead {
+  background-color: #4CAF50; /* A green background for the header */
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Adds a line between rows */
+}
+
+th {
+  position: sticky;
+  top: 0; /* Makes the header sticky */
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5; /* Adds a hover effect on table rows */
+}
+
+/* Responsive typography */
+td {
+  font-size: 0.9em; /* Adjust size as needed */
+}
+
+h1#tableLabel {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.btn-buy {
+  background-color: blue;
+  color: white;
+}
+
+.btn-sell {
+  background-color: red;
+  color: white;
+}
+
+.table-container {
+  max-height: 300px; /* Set your desired height here */
+  overflow-y: auto; /* Enable vertical scroll */
+}

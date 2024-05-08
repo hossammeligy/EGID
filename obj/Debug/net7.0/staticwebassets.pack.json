@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/macbook/Desktop/EGID/Test/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Test.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.Test.props",
+      "PackagePath": "build\\Test.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Test.props",
+      "PackagePath": "buildMultiTargeting\\Test.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Test.props",
+      "PackagePath": "buildTransitive\\Test.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

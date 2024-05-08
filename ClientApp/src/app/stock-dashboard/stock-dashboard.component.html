@@ -1,0 +1,48 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Stock</th>
+            <th scope="col">Current Price</th>
+            <th scope="col">Date</th>
+            <th scope="col">Buy</th>
+            <th scope="col">Sell</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stock of stocks">
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.currentPrice }}</td>
+            <td>{{ stock.timeStamp | date:'short' }}</td>
+            <td>
+                <button class="btn btn-success btn-sm" (click)="openOrderForm(stock.symbol, 'Buy')">
+                    <i class="bi bi-cart-plus" style="font-size: 1.2rem;"></i>
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="openOrderForm(stock.symbol, 'Sell')">
+                    <i class="bi bi-cart-dash" style="font-size: 1.2rem;"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="mx-auto d-none d-sm-inline-block">
+    <a class="navbar-brand" [routerLink]="['/']" style="font-size: 1.5rem; font-weight: bold;">Stock History</a>
+</div>
+
+<!-- stock-dashboard.component.html -->
+<div class="table-container">
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedSymbol" (change)="selectedSymbol && fetchStockHistory(selectedSymbol)">
+        <option *ngFor="let stock of stocks" [value]="stock.symbol">{{ stock.symbol }}</option>
+    </select>
+</div>
+
+<div class="chart-container" *ngIf="lineChartData.length > 0">
+    <canvas baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [chartType]="'line'">
+    </canvas>
+</div>
