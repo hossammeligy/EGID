@@ -1,4 +1,4 @@
-# EGID
+# Instock
 Full stack development for StockApp
 
 # Project File
